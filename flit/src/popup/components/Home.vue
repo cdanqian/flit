@@ -1,10 +1,40 @@
 <template>
   <body>
-    <h1>Hi 😀</h1>
-    <!-- <p>
-      <router-link to="/add">Go to add</router-link>
-    </p> -->
-    <router-view></router-view>
+    <div>
+      <hr aria-orientation="horizontal" class="v-divider" />
+    </div>
+    <div>
+      <table>
+        <tr v-for="item in mylist" :key="item.id">
+          <td>{{ item.name }}</td>
+          <td>{{ item.time }}</td>
+          <td>{{ item.emoji }}</td>
+        </tr>
+      </table>
+    </div>
+    <div>
+      <hr aria-orientation="horizontal" class="v-divider" />
+    </div>
+    <div class="v-bottom">
+      <div class="v-bottom-addnew" v-on:click="addTimeZone">
+        <div class="v-icon">
+          <svg
+            width="24"
+            height="24"
+            xmlns="http://www.w3.org/2000/svg"
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            fill="#6d758d"
+          >
+            <path
+              d="M11.5 0c6.347 0 11.5 5.153 11.5 11.5s-5.153 11.5-11.5 11.5-11.5-5.153-11.5-11.5 5.153-11.5 11.5-11.5zm0 1c5.795 0 10.5 4.705 10.5 10.5s-4.705 10.5-10.5 10.5-10.5-4.705-10.5-10.5 4.705-10.5 10.5-10.5zm.5 10h6v1h-6v6h-1v-6h-6v-1h6v-6h1v6z"
+            />
+          </svg>
+        </div>
+        New Time Zone
+        <!-- <router-link to="/add">Go to add</router-link> -->
+      </div>
+    </div>
   </body>
 </template>
 
@@ -16,6 +46,7 @@ export default {
     };
   },
   created() {
+    // this.$router.push("app");
     this.buildList();
     this.updateSecond();
     this.timer = setInterval(this.updateSecond, 1000);
@@ -34,7 +65,7 @@ export default {
       });
     },
     addTimeZone() {
-      alert("add new page");
+      this.$router.push("/add");
     },
   },
   computed: {},
