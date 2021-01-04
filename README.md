@@ -6,5 +6,5 @@ As I use chrome browser intensively in daily study and program development, I de
 
 ❤️
 
-
+![screenshot](https://github.com/cdanqian/flit/blob/master/flit/resources/Screen%20Shot.png)
 
