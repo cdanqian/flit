@@ -6,4 +6,5 @@ As I use chrome browser intensively in daily study and program development, I de
 
 ❤️
 
-<img src="/Users/qiandan/Desktop/Screen Shot 2021-01-04 at 01.11.56.png" alt="Screen Shot 2021-01-04 at 01.11.56" style="zoom:50%;" />
+
+
